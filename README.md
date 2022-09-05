@@ -42,18 +42,47 @@
 - IHotbar - Hotbar interface
 - Hotbar class
 
-### .NET Fiddle
+### Suggested Development Environments
+#### .NET Fiddle - A quick and easy dev environment in a browser tab
+
 If you want a playground where you can build and run the code all in the browser, here's the fiddle:
 https://dotnetfiddle.net/WVDPV8
 
->Note: When you change the code in the fiddle and you click "Share", then you'll get a new fiddle that is different from the WVDPV8 one above.
+When you change the code in the fiddle and you click "Share", then you'll get a new fiddle that is different from the WVDPV8 one above.
 
-### Github Project
-For this project if you want to use your own dev environment (i.e. Visual Studio), fork this repo:
+>Note: You should see the following output initially in the fiddle.
+
+```
+Stack Trace:
+[System.NotImplementedException:
+The method or operation is not implemented.]
+    at Hotbar.Pack() :line 162
+    at Program.DoHotbarPack() :line 203
+    at Program.Main() :line 255
+```
+
+>Double-clicking on the Hotbar.Pack() :line 163 will take you to the following code:
+
+```cs
+    public void Pack() {
+        /////////////////////////////////////////////////
+        // TODO #1
+        throw new System.NotImplementedException();
+    }
+
+    public void SortByItemType() {
+        /////////////////////////////////////////////////
+        // TODO #2
+        throw new System.NotImplementedException();
+    }
+```
+
+#### Github
+For this project, if you want to use your own dev environment (i.e. Visual Studio) fork this repo:
 https://github.com/gamedevandcodingdiscord/puzzle0
 
 
 
 ### How to Share Your Solution
 
-In the `#puzzle` channel, post your URL to the .NET Fiddle or github fork.
+In the `#puzzle` channel, post the URL to your .NET Fiddle or Github fork.
