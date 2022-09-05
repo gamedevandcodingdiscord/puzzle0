@@ -46,7 +46,7 @@
 #### .NET Fiddle - A quick and easy dev environment in a browser tab
 
 If you want a playground where you can build and run the code all in the browser, here's the fiddle:
-https://dotnetfiddle.net/0FoJYc
+https://dotnetfiddle.net/gbApo0
 
 When you change the code in the fiddle and you click "Share", a new fiddle URL will be generated.
 
@@ -56,12 +56,12 @@ When you change the code in the fiddle and you click "Share", a new fiddle URL w
 Stack Trace:
 [System.NotImplementedException:
 The method or operation is not implemented.]
-    at Hotbar.Pack() :line 167
-    at Program.DoHotbarPack() :line 211
-    at Program.Main() :line 263
+    at Hotbar.Pack() :line 166
+    at Program.DoHotbarPack() :line 210
+    at Program.Main() :line 262
 ```
 
->Double-clicking on the Hotbar.Pack() :line 167 will take you to the following code, which is where you would need to add your code:
+>Double-clicking on the Hotbar.Pack() :line 166 will take you to the following code, which is where you would need to add your code:
 
 ```cs
     public void Pack() {

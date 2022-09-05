@@ -29,8 +29,8 @@ public class Ring : IItem {
     }
 
     public override string ToString() {
-		return string.Format("{0} [Ring] - Id {1}", Name, Id);
-	}
+        return string.Format("{0} [Ring] - Id {1}", Name, Id);
+    }
 }
 
 public class Weapon : IItem {
@@ -47,8 +47,8 @@ public class Weapon : IItem {
     }
 
     public override string ToString() {
-		return string.Format("{0} [Weapon] - Id {1}", Name, Id);
-	}
+        return string.Format("{0} [Weapon] - Id {1}", Name, Id);
+    }
 }
 
 /// <summary>
@@ -119,21 +119,21 @@ public class Hotbar : IHotbar {
     public Hotbar() {
         // Empty out the slots to start with
         for (int i = 0; i < NumSlots; ++i) {
-			slots.Add(null);
+            slots.Add(null);
         }
     }
 
     public void Dump() {
-		Console.WriteLine("    Hotbar {");
+        Console.WriteLine("    Hotbar {");
 
         for (int i = 0; i < NumSlots; ++i) {
-			Console.Write("        Slot " + i + " - ");
-			var item = slots[i];
+            Console.Write("        Slot " + i + " - ");
+            var item = slots[i];
             Console.WriteLine(item == null ? "NULL" : item.ToString());
         }
 
-		Console.WriteLine("    }");
-		Console.WriteLine();
+        Console.WriteLine("    }");
+        Console.WriteLine();
     }
 
     public int GetNumSlots() {
@@ -183,10 +183,10 @@ public partial class Program {
 
     static void ResetHotbar() {
         hotbar.RemoveAllItems();
-		SetItems();
-	}
+        SetItems();
+    }
 
-	static void SetItems() {
+    static void SetItems() {
         IItem sword = new Weapon(ID_SWORD, "Excalibur");
         IItem watergun = new Weapon(ID_WATERGUN, "Watergun");
         IItem ringTeleportation = new Ring(ID_RING_TELEPORTATION, "Ring of Teleportation");
@@ -261,7 +261,7 @@ public partial class Program {
 
         DoHotbarPack();
 
-		// Uncomment next line if you want to do the bonus
-		// DoHotbarSortByItemType();
+        // Uncomment next line if you want to do the bonus
+        // DoHotbarSortByItemType();
     }
 }
