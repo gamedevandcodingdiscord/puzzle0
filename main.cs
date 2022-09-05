@@ -124,11 +124,16 @@ public class Hotbar : IHotbar {
     }
 
     public void Dump() {
-        foreach (var item in slots) {
-            Console.WriteLine("Hotbar {");
+		Console.WriteLine("    Hotbar {");
+
+        for (int i = 0; i < NumSlots; ++i) {
+			Console.Write("        Slot " + i + " - ");
+			var item = slots[i];
             Console.WriteLine(item == null ? "NULL" : item.ToString());
-            Console.WriteLine("} // Hotbar\n");
         }
+
+		Console.WriteLine("    }");
+		Console.WriteLine();
     }
 
     public int GetNumSlots() {
@@ -168,7 +173,7 @@ public class Hotbar : IHotbar {
     }
 }
 
-public class Program {
+public partial class Program {
     static IHotbar hotbar = new Hotbar();
 
     const int ID_SWORD = 0;
@@ -178,7 +183,10 @@ public class Program {
 
     static void ResetHotbar() {
         hotbar.RemoveAllItems();
+		SetItems();
+	}
 
+	static void SetItems() {
         IItem sword = new Weapon(ID_SWORD, "Excalibur");
         IItem watergun = new Weapon(ID_WATERGUN, "Watergun");
         IItem ringTeleportation = new Ring(ID_RING_TELEPORTATION, "Ring of Teleportation");
@@ -249,9 +257,11 @@ public class Program {
     }
 
     public static void Main() {
-        ResetHotbar();
+        SetItems();
 
         DoHotbarPack();
-        DoHotbarSortByItemType();
+
+		// Uncomment next line if you want to do the bonus
+		// DoHotbarSortByItemType();
     }
 }

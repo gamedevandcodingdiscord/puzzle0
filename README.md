@@ -1,4 +1,4 @@
-# puzzle0
+# "Puzzle" 0
 
 ## Challenge
 
@@ -46,22 +46,22 @@
 #### .NET Fiddle - A quick and easy dev environment in a browser tab
 
 If you want a playground where you can build and run the code all in the browser, here's the fiddle:
-https://dotnetfiddle.net/WVDPV8
+https://dotnetfiddle.net/0FoJYc
 
-When you change the code in the fiddle and you click "Share", then you'll get a new fiddle that is different from the WVDPV8 one above.
+When you change the code in the fiddle and you click "Share", a new fiddle URL will be generated.
 
->Note: You should see the following output initially in the fiddle.
+>Note: In the bottom output pane of the fiddle, you should see output similar to this:
 
 ```
 Stack Trace:
 [System.NotImplementedException:
 The method or operation is not implemented.]
-    at Hotbar.Pack() :line 162
-    at Program.DoHotbarPack() :line 203
-    at Program.Main() :line 255
+    at Hotbar.Pack() :line 167
+    at Program.DoHotbarPack() :line 211
+    at Program.Main() :line 263
 ```
 
->Double-clicking on the Hotbar.Pack() :line 163 will take you to the following code:
+>Double-clicking on the Hotbar.Pack() :line 167 will take you to the following code, which is where you would need to add your code:
 
 ```cs
     public void Pack() {
@@ -86,3 +86,6 @@ https://github.com/gamedevandcodingdiscord/puzzle0
 ### How to Share Your Solution
 
 In the `#puzzle` channel, post the URL to your .NET Fiddle or Github fork.
+
+
+Thanks for participating!
